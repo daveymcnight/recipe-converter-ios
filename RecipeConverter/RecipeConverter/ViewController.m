@@ -12,11 +12,17 @@
 
 @end
 
+
+
 @implementation ViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UIView *viewPopup = [[UIView alloc] initWithFrame:CGRectMake(200, 0, 200, 200)];
+    [self.view addSubview:viewPopup];
+
 }
 
 - (void)didReceiveMemoryWarning {

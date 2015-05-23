@@ -14,6 +14,8 @@
 		85070BA51B0FE4BE00FE189B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85070BA41B0FE4BE00FE189B /* Images.xcassets */; };
 		85070BA81B0FE4BE00FE189B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85070BA61B0FE4BE00FE189B /* LaunchScreen.xib */; };
 		85070BB41B0FE4BE00FE189B /* RecipeConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BB31B0FE4BE00FE189B /* RecipeConverterTests.m */; };
+		85070BC01B0FFCCF00FE189B /* AddRecipeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BBF1B0FFCCF00FE189B /* AddRecipeController.m */; };
+		85070BC31B1000EC00FE189B /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BC21B1000EC00FE189B /* Recipe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,11 @@
 		85070BAD1B0FE4BE00FE189B /* RecipeConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85070BB21B0FE4BE00FE189B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85070BB31B0FE4BE00FE189B /* RecipeConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecipeConverterTests.m; sourceTree = "<group>"; };
+		85070BBE1B0FFCCF00FE189B /* AddRecipeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRecipeController.h; sourceTree = "<group>"; };
+		85070BBF1B0FFCCF00FE189B /* AddRecipeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRecipeController.m; sourceTree = "<group>"; };
+		85070BC11B1000EC00FE189B /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		85070BC21B1000EC00FE189B /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		85D985111B100C6500711840 /* RecipeSvc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipeSvc.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +88,9 @@
 		85070B961B0FE4BE00FE189B /* RecipeConverter */ = {
 			isa = PBXGroup;
 			children = (
+				85070BBE1B0FFCCF00FE189B /* AddRecipeController.h */,
+				85070BBF1B0FFCCF00FE189B /* AddRecipeController.m */,
+				85070BBD1B0FEE9A00FE189B /* Model */,
 				85070B9B1B0FE4BE00FE189B /* AppDelegate.h */,
 				85070B9C1B0FE4BE00FE189B /* AppDelegate.m */,
 				85070B9E1B0FE4BE00FE189B /* ViewController.h */,
@@ -117,6 +127,24 @@
 				85070BB21B0FE4BE00FE189B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85070BBD1B0FEE9A00FE189B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85070BC41B10043700FE189B /* Services */,
+				85070BC11B1000EC00FE189B /* Recipe.h */,
+				85070BC21B1000EC00FE189B /* Recipe.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		85070BC41B10043700FE189B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				85D985111B100C6500711840 /* RecipeSvc.h */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +248,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				85070BA01B0FE4BE00FE189B /* ViewController.m in Sources */,
+				85070BC31B1000EC00FE189B /* Recipe.m in Sources */,
+				85070BC01B0FFCCF00FE189B /* AddRecipeController.m in Sources */,
 				85070B9D1B0FE4BE00FE189B /* AppDelegate.m in Sources */,
 				85070B9A1B0FE4BE00FE189B /* main.m in Sources */,
 			);
@@ -412,6 +442,7 @@
 				85070BB91B0FE4BE00FE189B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85070BBA1B0FE4BE00FE189B /* Build configuration list for PBXNativeTarget "RecipeConverterTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +451,7 @@
 				85070BBC1B0FE4BE00FE189B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

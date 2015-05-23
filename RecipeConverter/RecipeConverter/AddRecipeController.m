@@ -14,9 +14,12 @@
 
 @implementation AddRecipeController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    ViewController.ingre
 }
 
 - (void)didReceiveMemoryWarning {
