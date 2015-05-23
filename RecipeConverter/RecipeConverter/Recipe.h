@@ -11,6 +11,6 @@
 @interface Recipe : NSObject
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSArray *ingredients;
+@property (nonatomic, strong) NSMutableArray *ingredients;
 
 @end

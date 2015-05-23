@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AddRecipeController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *recipeName;
+@property (weak, nonatomic) IBOutlet UITextField *ingredientTv;
+
+
 
 @end

@@ -1,5 +1,5 @@
 //
-//  RecipeSvc.h
+//  RecSvc.h
 //  RecipeConverter
 //
 //  Created by Davey McNight on 5/22/15.
@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Recipe.h"
 
-@protocol RecipeSvc <NSObject>
-
--(Recipe *) createRecipe: (Recipe *) Recipe;
+@protocol RecSvc <NSObject>
+-(Recipe *) createRecipe: (Recipe *) recipe;
 -(NSMutableArray*) retrieveAllRecipes;
--(Recipe *) updateRecipe: (Recipe *) Recipe;
--(Recipe *) deleteRecipe: (Recipe *) Recipe;
+-(Recipe *) updateRecipe: (Recipe *) recipe;
+-(Recipe *) deleteRecipe: (Recipe *) recipe;
+
 
 @end

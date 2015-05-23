@@ -16,6 +16,8 @@
 		85070BB41B0FE4BE00FE189B /* RecipeConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BB31B0FE4BE00FE189B /* RecipeConverterTests.m */; };
 		85070BC01B0FFCCF00FE189B /* AddRecipeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BBF1B0FFCCF00FE189B /* AddRecipeController.m */; };
 		85070BC31B1000EC00FE189B /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BC21B1000EC00FE189B /* Recipe.m */; };
+		961BB18EA8E803F6F225C9D1 /* RecipeSvcCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 961BBA834D3BA6C99FCE44DB /* RecipeSvcCache.m */; };
+		961BBB501332672B504AC615 /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 961BB1AD3E8B3E6EC7FC0201 /* Ingredient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +48,11 @@
 		85070BBF1B0FFCCF00FE189B /* AddRecipeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRecipeController.m; sourceTree = "<group>"; };
 		85070BC11B1000EC00FE189B /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
 		85070BC21B1000EC00FE189B /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
-		85D985111B100C6500711840 /* RecipeSvc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipeSvc.h; sourceTree = "<group>"; };
+		85D985161B10117200711840 /* RecSvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecSvc.h; sourceTree = "<group>"; };
+		961BB1AD3E8B3E6EC7FC0201 /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredient.m; sourceTree = "<group>"; };
+		961BBA834D3BA6C99FCE44DB /* RecipeSvcCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeSvcCache.m; sourceTree = "<group>"; };
+		961BBB95F786814706FD01A7 /* RecipeSvcCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeSvcCache.h; sourceTree = "<group>"; };
+		961BBFD9F96261C658F3CAC1 /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredient.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,8 @@
 				85070BC41B10043700FE189B /* Services */,
 				85070BC11B1000EC00FE189B /* Recipe.h */,
 				85070BC21B1000EC00FE189B /* Recipe.m */,
+				961BB1AD3E8B3E6EC7FC0201 /* Ingredient.m */,
+				961BBFD9F96261C658F3CAC1 /* Ingredient.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -142,7 +150,9 @@
 		85070BC41B10043700FE189B /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				85D985111B100C6500711840 /* RecipeSvc.h */,
+				85D985161B10117200711840 /* RecSvc.h */,
+				961BBA834D3BA6C99FCE44DB /* RecipeSvcCache.m */,
+				961BBB95F786814706FD01A7 /* RecipeSvcCache.h */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -252,6 +262,8 @@
 				85070BC01B0FFCCF00FE189B /* AddRecipeController.m in Sources */,
 				85070B9D1B0FE4BE00FE189B /* AppDelegate.m in Sources */,
 				85070B9A1B0FE4BE00FE189B /* main.m in Sources */,
+				961BB18EA8E803F6F225C9D1 /* RecipeSvcCache.m in Sources */,
+				961BBB501332672B504AC615 /* Ingredient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

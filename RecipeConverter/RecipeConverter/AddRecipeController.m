@@ -7,24 +7,42 @@
 //
 
 #import "AddRecipeController.h"
+#import "Recipe.h"
+#import "RecipeSvcCache.h"
+#import "Ingredient.h"
 
 @interface AddRecipeController ()
 
 @end
 
+
 @implementation AddRecipeController
 
-
+NSMutableArray *ingredients;
+Recipe *recipe = nil;
+RecipeSvcCache *recipeSvc = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    ViewController.ingre
+    recipeSvc = [[RecipeSvcCache alloc] init];
+    ingredients = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)addIngredient:(id)sender {
+    Ingredient *ingredient = [[Ingredient alloc] init];
+    ingredient.description = _ingredientTv.text;
+    [ingredients addObject: ingredient];
+}
+- (IBAction)saveRecipe:(id)sender {
+  recipe = [[Recipe alloc]init];
+  recipe.name = _recipeName.text;
+
+//    [[NSUserDefaults standardUserDefaults] setObject recipe forKey:@"myArray"];
 }
 
 /*

@@ -47,6 +47,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="6mB-qS-UsF" id="Tc4-Q7-Yp1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,7 +77,11 @@
                                                 <segue destination="vXZ-lx-hvc" kind="show" id="SQr-DM-3PT"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="EsT-e8-r6e"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="EsT-e8-r6e">
+                                            <connections>
+                                                <action selector="saveRecipe:" destination="P6F-4m-7AV" id="JLz-Hp-Gca"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -105,11 +112,18 @@
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addIngredient:" destination="P6F-4m-7AV" eventType="touchUpInside" id="Q1X-Dy-0Zc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="ingredientTv" destination="TMf-FT-MFj" id="c7M-E8-3JQ"/>
+                        <outlet property="recipeName" destination="e5C-Pn-c4c" id="YRb-nT-rAH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ix-Li-Q8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
