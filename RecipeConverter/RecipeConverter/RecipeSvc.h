@@ -10,4 +10,9 @@
 
 @protocol RecipeSvc <NSObject>
 
+-(Recipe *) createRecipe: (Recipe *) Recipe;
+-(NSMutableArray*) retrieveAllRecipes;
+-(Recipe *) updateRecipe: (Recipe *) Recipe;
+-(Recipe *) deleteRecipe: (Recipe *) Recipe;
+
 @end
