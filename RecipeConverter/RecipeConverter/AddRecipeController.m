@@ -7,7 +7,6 @@
 //
 
 #import "AddRecipeController.h"
-#import "Recipe.h"
 #import "RecipeSvcCache.h"
 #import "Ingredient.h"
 
@@ -20,13 +19,14 @@
 
 NSMutableArray *ingredients;
 Recipe *recipe = nil;
-RecipeSvcCache *recipeSvc = nil;
+RecipeSvcCache *recipeSvc;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     recipeSvc = [[RecipeSvcCache alloc] init];
     ingredients = [[NSMutableArray alloc] init];
+    self.tableView.allowsMultipleSelectionDuringEditing = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,14 +35,45 @@ RecipeSvcCache *recipeSvc = nil;
 }
 - (IBAction)addIngredient:(id)sender {
     Ingredient *ingredient = [[Ingredient alloc] init];
-    ingredient.description = _ingredientTv.text;
+    ingredient.name = _ingredientTv.text;
     [ingredients addObject: ingredient];
+    NSLog(ingredient.name);
+    [self.tableView reloadData];
 }
 - (IBAction)saveRecipe:(id)sender {
-  recipe = [[Recipe alloc]init];
-  recipe.name = _recipeName.text;
+//    recipe = [[Recipe alloc]init];
+//    recipe.name = _recipeName.text;
+//    recipe.ingredients = ingredients;
+//    [recipeSvc createRecipe:recipe];
+}
 
-//    [[NSUserDefaults standardUserDefaults] setObject recipe forKey:@"myArray"];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [ingredients count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *simpleTableIdentifier= @"SimpleTableItem";
+    UITableViewCell*cell = [self.tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    Ingredient *ingredient = [ingredients  objectAtIndex:indexPath.row];
+    cell.textLabel.text = ingredient.name;
+    return cell;
+}
+
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    return YES;
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+
+            [ingredients removeObjectAtIndex:indexPath.row];
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [self.tableView reloadData];
+    }
 }
 
 /*

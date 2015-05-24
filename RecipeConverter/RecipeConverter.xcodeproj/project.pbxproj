@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85070B9A1B0FE4BE00FE189B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070B991B0FE4BE00FE189B /* main.m */; };
-		85070B9D1B0FE4BE00FE189B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070B9C1B0FE4BE00FE189B /* AppDelegate.m */; };
-		85070BA01B0FE4BE00FE189B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070B9F1B0FE4BE00FE189B /* ViewController.m */; };
 		85070BA31B0FE4BE00FE189B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85070BA11B0FE4BE00FE189B /* Main.storyboard */; };
 		85070BA51B0FE4BE00FE189B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85070BA41B0FE4BE00FE189B /* Images.xcassets */; };
 		85070BA81B0FE4BE00FE189B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85070BA61B0FE4BE00FE189B /* LaunchScreen.xib */; };
 		85070BB41B0FE4BE00FE189B /* RecipeConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BB31B0FE4BE00FE189B /* RecipeConverterTests.m */; };
-		85070BC01B0FFCCF00FE189B /* AddRecipeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BBF1B0FFCCF00FE189B /* AddRecipeController.m */; };
-		85070BC31B1000EC00FE189B /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BC21B1000EC00FE189B /* Recipe.m */; };
-		961BB18EA8E803F6F225C9D1 /* RecipeSvcCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 961BBA834D3BA6C99FCE44DB /* RecipeSvcCache.m */; };
-		961BBB501332672B504AC615 /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 961BB1AD3E8B3E6EC7FC0201 /* Ingredient.m */; };
+		8547F2F51B103D2B008D06F1 /* AddRecipeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BBF1B0FFCCF00FE189B /* AddRecipeController.m */; };
+		8547F2F61B103D2B008D06F1 /* RecipeSvcCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 961BBA834D3BA6C99FCE44DB /* RecipeSvcCache.m */; };
+		8547F2F71B103D2B008D06F1 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BC21B1000EC00FE189B /* Recipe.m */; };
+		8547F2F81B103D2B008D06F1 /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 961BB1AD3E8B3E6EC7FC0201 /* Ingredient.m */; };
+		8547F2F91B103D2B008D06F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070B9C1B0FE4BE00FE189B /* AppDelegate.m */; };
+		8547F2FA1B103D2B008D06F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070B9F1B0FE4BE00FE189B /* ViewController.m */; };
+		8547F2FB1B103D2B008D06F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070B991B0FE4BE00FE189B /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,13 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85070BA01B0FE4BE00FE189B /* ViewController.m in Sources */,
-				85070BC31B1000EC00FE189B /* Recipe.m in Sources */,
-				85070BC01B0FFCCF00FE189B /* AddRecipeController.m in Sources */,
-				85070B9D1B0FE4BE00FE189B /* AppDelegate.m in Sources */,
-				85070B9A1B0FE4BE00FE189B /* main.m in Sources */,
-				961BB18EA8E803F6F225C9D1 /* RecipeSvcCache.m in Sources */,
-				961BBB501332672B504AC615 /* Ingredient.m in Sources */,
+				8547F2F51B103D2B008D06F1 /* AddRecipeController.m in Sources */,
+				8547F2F61B103D2B008D06F1 /* RecipeSvcCache.m in Sources */,
+				8547F2F71B103D2B008D06F1 /* Recipe.m in Sources */,
+				8547F2F81B103D2B008D06F1 /* Ingredient.m in Sources */,
+				8547F2F91B103D2B008D06F1 /* AppDelegate.m in Sources */,
+				8547F2FA1B103D2B008D06F1 /* ViewController.m in Sources */,
+				8547F2FB1B103D2B008D06F1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
