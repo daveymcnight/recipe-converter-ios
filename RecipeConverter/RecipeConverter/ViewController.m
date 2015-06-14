@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "RecipeSvcCache.h"
+#import "RecipeSvcCoreData.h"
 #import "Recipe.h"
 @interface ViewController ()
 
@@ -17,13 +17,14 @@
 
 @implementation ViewController
 
-RecipeSvcCache *recipeSvc = nil;
-
-
+//RecipeSvcArchive* recipeSvc2 = nil;
+RecipeSvcCoreData *recipeSvcCoreData2 = nil;
+//
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    recipeSvc = [[RecipeSvcCache alloc] init];
+   // recipeSvc2 = [[RecipeSvcArchive alloc] init];
+  recipeSvcCoreData2 = [[RecipeSvcCoreData alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,12 +33,19 @@ RecipeSvcCache *recipeSvc = nil;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    //return [recipeSvc2.retrieveAllRecipes count];
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    static NSString *simpleTableIdentifier= @"SimpleTableItem";
+    UITableViewCell*cell = [self.tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    //Recipe *recipe = [[recipeSvcCoreData2 retrieveAllRecipes]objectAtIndex:indexPath.row];
+    //cell.textLabel.text = recipe.name;
+    return cell;
 }
+
 
 
 @end

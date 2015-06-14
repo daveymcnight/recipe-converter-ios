@@ -12,12 +12,13 @@
 		85070BA81B0FE4BE00FE189B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85070BA61B0FE4BE00FE189B /* LaunchScreen.xib */; };
 		85070BB41B0FE4BE00FE189B /* RecipeConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BB31B0FE4BE00FE189B /* RecipeConverterTests.m */; };
 		8547F2F51B103D2B008D06F1 /* AddRecipeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BBF1B0FFCCF00FE189B /* AddRecipeController.m */; };
-		8547F2F61B103D2B008D06F1 /* RecipeSvcCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 961BBA834D3BA6C99FCE44DB /* RecipeSvcCache.m */; };
-		8547F2F71B103D2B008D06F1 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070BC21B1000EC00FE189B /* Recipe.m */; };
-		8547F2F81B103D2B008D06F1 /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 961BB1AD3E8B3E6EC7FC0201 /* Ingredient.m */; };
 		8547F2F91B103D2B008D06F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070B9C1B0FE4BE00FE189B /* AppDelegate.m */; };
 		8547F2FA1B103D2B008D06F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070B9F1B0FE4BE00FE189B /* ViewController.m */; };
 		8547F2FB1B103D2B008D06F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85070B991B0FE4BE00FE189B /* main.m */; };
+		85F48EE41B2E066A00AD9682 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F48EE31B2E066A00AD9682 /* CoreData.framework */; };
+		85F48EE71B2E09C200AD9682 /* RecipeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85F48EE51B2E09C200AD9682 /* RecipeModel.xcdatamodeld */; };
+		85F48EEA1B2E0CB400AD9682 /* RecipeSvcCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F48EE91B2E0CB400AD9682 /* RecipeSvcCoreData.m */; };
+		85F48EED1B2E1B0000AD9682 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F48EEC1B2E1B0000AD9682 /* Recipe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +47,13 @@
 		85070BB31B0FE4BE00FE189B /* RecipeConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecipeConverterTests.m; sourceTree = "<group>"; };
 		85070BBE1B0FFCCF00FE189B /* AddRecipeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRecipeController.h; sourceTree = "<group>"; };
 		85070BBF1B0FFCCF00FE189B /* AddRecipeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRecipeController.m; sourceTree = "<group>"; };
-		85070BC11B1000EC00FE189B /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
-		85070BC21B1000EC00FE189B /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 		85D985161B10117200711840 /* RecSvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecSvc.h; sourceTree = "<group>"; };
-		961BB1AD3E8B3E6EC7FC0201 /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredient.m; sourceTree = "<group>"; };
-		961BBA834D3BA6C99FCE44DB /* RecipeSvcCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeSvcCache.m; sourceTree = "<group>"; };
-		961BBB95F786814706FD01A7 /* RecipeSvcCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeSvcCache.h; sourceTree = "<group>"; };
-		961BBFD9F96261C658F3CAC1 /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredient.h; sourceTree = "<group>"; };
+		85F48EE31B2E066A00AD9682 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		85F48EE61B2E09C200AD9682 /* RecipeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipeModel.xcdatamodel; sourceTree = "<group>"; };
+		85F48EE81B2E0CB400AD9682 /* RecipeSvcCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeSvcCoreData.h; sourceTree = "<group>"; };
+		85F48EE91B2E0CB400AD9682 /* RecipeSvcCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeSvcCoreData.m; sourceTree = "<group>"; };
+		85F48EEB1B2E1B0000AD9682 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		85F48EEC1B2E1B0000AD9682 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F48EE41B2E066A00AD9682 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +78,10 @@
 		85070B8B1B0FE4BE00FE189B = {
 			isa = PBXGroup;
 			children = (
+				85F48EE51B2E09C200AD9682 /* RecipeModel.xcdatamodeld */,
+				85F48EEB1B2E1B0000AD9682 /* Recipe.h */,
+				85F48EEC1B2E1B0000AD9682 /* Recipe.m */,
+				85F48EE31B2E066A00AD9682 /* CoreData.framework */,
 				85070B961B0FE4BE00FE189B /* RecipeConverter */,
 				85070BB01B0FE4BE00FE189B /* RecipeConverterTests */,
 				85070B951B0FE4BE00FE189B /* Products */,
@@ -139,10 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				85070BC41B10043700FE189B /* Services */,
-				85070BC11B1000EC00FE189B /* Recipe.h */,
-				85070BC21B1000EC00FE189B /* Recipe.m */,
-				961BB1AD3E8B3E6EC7FC0201 /* Ingredient.m */,
-				961BBFD9F96261C658F3CAC1 /* Ingredient.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -151,8 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				85D985161B10117200711840 /* RecSvc.h */,
-				961BBA834D3BA6C99FCE44DB /* RecipeSvcCache.m */,
-				961BBB95F786814706FD01A7 /* RecipeSvcCache.h */,
+				85F48EE81B2E0CB400AD9682 /* RecipeSvcCoreData.h */,
+				85F48EE91B2E0CB400AD9682 /* RecipeSvcCoreData.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -258,9 +260,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8547F2F51B103D2B008D06F1 /* AddRecipeController.m in Sources */,
-				8547F2F61B103D2B008D06F1 /* RecipeSvcCache.m in Sources */,
-				8547F2F71B103D2B008D06F1 /* Recipe.m in Sources */,
-				8547F2F81B103D2B008D06F1 /* Ingredient.m in Sources */,
+				85F48EED1B2E1B0000AD9682 /* Recipe.m in Sources */,
+				85F48EE71B2E09C200AD9682 /* RecipeModel.xcdatamodeld in Sources */,
+				85F48EEA1B2E0CB400AD9682 /* RecipeSvcCoreData.m in Sources */,
 				8547F2F91B103D2B008D06F1 /* AppDelegate.m in Sources */,
 				8547F2FA1B103D2B008D06F1 /* ViewController.m in Sources */,
 				8547F2FB1B103D2B008D06F1 /* main.m in Sources */,
@@ -385,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = RecipeConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -395,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = RecipeConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -466,6 +470,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		85F48EE51B2E09C200AD9682 /* RecipeModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				85F48EE61B2E09C200AD9682 /* RecipeModel.xcdatamodel */,
+			);
+			currentVersion = 85F48EE61B2E09C200AD9682 /* RecipeModel.xcdatamodel */;
+			path = RecipeModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 85070B8C1B0FE4BE00FE189B /* Project object */;
 }

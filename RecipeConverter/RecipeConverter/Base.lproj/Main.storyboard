@@ -32,6 +32,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6mB-qS-UsF">
                                 <rect key="frame" x="0.0" y="64" width="375" height="610"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="dEm-Ue-4hc"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="2f9-ys-xHi"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -67,58 +71,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5s-4X-hgt">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5s-4X-hgt">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Enter Recipe Data" id="5Si-Rz-flL">
                                         <barButtonItem key="backBarButtonItem" title="Item" id="bGU-1I-X3b"/>
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="0U1-vu-Ayd">
                                             <connections>
-                                                <segue destination="vXZ-lx-hvc" kind="show" id="SQr-DM-3PT"/>
+                                                <segue destination="vXZ-lx-hvc" kind="show" identifier="back" id="SQr-DM-3PT"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="EsT-e8-r6e">
                                             <connections>
-                                                <action selector="saveRecipe:" destination="P6F-4m-7AV" id="JLz-Hp-Gca"/>
+                                                <action selector="saveRec:" destination="P6F-4m-7AV" id="h5n-IT-dxd"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiy-EL-P22">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiy-EL-P22">
                                 <rect key="frame" x="16" y="103" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="EHR-8f-Swg"/>
+                                    <constraint firstAttribute="height" constant="30" id="I5K-Oj-NPr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredient" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5f-aX-q6c">
-                                <rect key="frame" x="41" y="189" width="116" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5f-aX-q6c">
+                                <rect key="frame" x="41" y="189" width="77" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMf-FT-MFj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMf-FT-MFj">
                                 <rect key="frame" x="41" y="223" width="157" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e5C-Pn-c4c">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e5C-Pn-c4c">
                                 <rect key="frame" x="41" y="141" width="157" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="qeF-qA-Jx2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEY-TV-ZxL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEY-TV-ZxL">
                                 <rect key="frame" x="259" y="223" width="30" height="30"/>
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="addIngredient:" destination="P6F-4m-7AV" eventType="touchUpInside" id="Q1X-Dy-0Zc"/>
-                                </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="K0P-El-aMx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="K0P-El-aMx">
                                 <rect key="frame" x="0.0" y="282" width="375" height="385"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="385" id="Wyy-Zv-FQf"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="P6F-4m-7AV" id="WVw-ru-23J"/>
                                 </connections>
@@ -127,10 +138,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="K0P-El-aMx" secondAttribute="trailing" constant="-16" id="4fs-qg-3aP"/>
+                            <constraint firstItem="e5C-Pn-c4c" firstAttribute="leading" secondItem="q5f-aX-q6c" secondAttribute="leading" id="6zL-Qo-zY3"/>
+                            <constraint firstItem="e5C-Pn-c4c" firstAttribute="top" secondItem="aiy-EL-P22" secondAttribute="bottom" constant="8" symbolic="YES" id="D7m-Y4-jc8"/>
+                            <constraint firstItem="tEY-TV-ZxL" firstAttribute="leading" secondItem="TMf-FT-MFj" secondAttribute="trailing" constant="61" id="FZM-lC-7ZU"/>
+                            <constraint firstItem="n5s-4X-hgt" firstAttribute="top" secondItem="zbN-kq-hwN" secondAttribute="bottom" id="GlL-1y-no8"/>
                             <constraint firstItem="WXf-37-nkl" firstAttribute="top" secondItem="K0P-El-aMx" secondAttribute="bottom" id="HSv-vc-oqK"/>
+                            <constraint firstItem="K0P-El-aMx" firstAttribute="top" secondItem="tEY-TV-ZxL" secondAttribute="bottom" constant="29" id="JgP-NJ-kRZ"/>
+                            <constraint firstItem="K0P-El-aMx" firstAttribute="trailing" secondItem="n5s-4X-hgt" secondAttribute="trailing" id="O79-W0-rmj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tEY-TV-ZxL" secondAttribute="trailing" constant="70" id="PiM-uU-9tH"/>
                             <constraint firstItem="K0P-El-aMx" firstAttribute="leading" secondItem="YN8-GY-Fep" secondAttribute="leadingMargin" constant="-16" id="QUg-oy-YVv"/>
+                            <constraint firstItem="q5f-aX-q6c" firstAttribute="top" secondItem="e5C-Pn-c4c" secondAttribute="bottom" constant="18" id="Zml-Xf-pRd"/>
+                            <constraint firstItem="tEY-TV-ZxL" firstAttribute="top" secondItem="TMf-FT-MFj" secondAttribute="top" id="btI-Nf-mnG"/>
+                            <constraint firstItem="aiy-EL-P22" firstAttribute="top" secondItem="n5s-4X-hgt" secondAttribute="bottom" constant="39" id="cm0-d6-bdU"/>
+                            <constraint firstItem="e5C-Pn-c4c" firstAttribute="leading" secondItem="TMf-FT-MFj" secondAttribute="leading" id="dr8-2c-y0S"/>
+                            <constraint firstItem="aiy-EL-P22" firstAttribute="leading" secondItem="YN8-GY-Fep" secondAttribute="leadingMargin" id="iZf-kM-0mL"/>
+                            <constraint firstItem="e5C-Pn-c4c" firstAttribute="trailing" secondItem="TMf-FT-MFj" secondAttribute="trailing" id="lfd-F9-zFa"/>
+                            <constraint firstItem="K0P-El-aMx" firstAttribute="leading" secondItem="n5s-4X-hgt" secondAttribute="leading" id="se3-Xj-Fkl"/>
                         </constraints>
                     </view>
+                    <keyCommands/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="ingredientTv" destination="TMf-FT-MFj" id="c7M-E8-3JQ"/>
@@ -140,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ix-Li-Q8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768.5" y="375.5"/>
+            <point key="canvasLocation" x="753.5" y="375.5"/>
         </scene>
     </scenes>
 </document>

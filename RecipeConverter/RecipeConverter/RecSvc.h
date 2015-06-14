@@ -11,7 +11,7 @@
 
 @protocol RecSvc <NSObject>
 -(Recipe *) createRecipe: (Recipe *) recipe;
--(NSMutableArray*) retrieveAllRecipes;
+-(NSArray*) retrieveAllRecipes;
 -(Recipe *) updateRecipe: (Recipe *) recipe;
 -(Recipe *) deleteRecipe: (Recipe *) recipe;
 
