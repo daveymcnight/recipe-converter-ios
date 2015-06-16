@@ -1,18 +1,18 @@
 //
-//  Recipe.m
+//  Ingredient.m
 //  RecipeConverter
 //
 //  Created by Davey McNight on 6/15/15.
 //  Copyright (c) 2015 msse650. All rights reserved.
 //
 
-#import "Recipe.h"
 #import "Ingredient.h"
+#import "Recipe.h"
 
 
-@implementation Recipe
+@implementation Ingredient
 
 @dynamic name;
-@dynamic ingredients;
+@dynamic recipe;
 
 @end

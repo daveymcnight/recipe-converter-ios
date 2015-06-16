@@ -12,4 +12,6 @@
 
 @interface RecipeSvcCoreData : NSObject <RecSvc>
 
+-(Recipe *)createManagedRecipe;
+
 @end

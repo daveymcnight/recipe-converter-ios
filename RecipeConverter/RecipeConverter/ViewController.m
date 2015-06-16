@@ -34,15 +34,16 @@ RecipeSvcCoreData *recipeSvcCoreData2 = nil;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //return [recipeSvc2.retrieveAllRecipes count];
-    return 10;
+    return [recipeSvcCoreData2.retrieveAllRecipes count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *simpleTableIdentifier= @"SimpleTableItem";
     UITableViewCell*cell = [self.tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    //Recipe *recipe = [[recipeSvcCoreData2 retrieveAllRecipes]objectAtIndex:indexPath.row];
-    //cell.textLabel.text = recipe.name;
+    Recipe *recipe = [[recipeSvcCoreData2 retrieveAllRecipes]objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = recipe.name;
     return cell;
 }
 

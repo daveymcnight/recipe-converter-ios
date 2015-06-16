@@ -31,8 +31,11 @@ RecipeSvcCoreData *recipeSvcCoreData = nil;
    self.tableView.allowsMultipleSelectionDuringEditing = NO;
 }
 - (IBAction)saveRec:(id)sender {
-    Recipe *recipe = [[Recipe alloc]init];
+    
+//    Recipe *recipe = [[Recipe alloc]init];
+    Recipe *recipe = [recipeSvcCoreData createManagedRecipe];
     recipe.name = self.recipeName.text;
+    
    // NSMutableArray *ingredientArray = [[NSMutableArray alloc]init];
 //    recipe.ingredients = ingredientArray;
     //

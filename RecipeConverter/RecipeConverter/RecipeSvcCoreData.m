@@ -47,19 +47,18 @@ NSManagedObjectContext *moc= nil;
 
 
 - (Recipe *)createRecipe:(Recipe *)recipe {
-    Recipe *managedRecipe = [self createManagedRecipe];
-    managedRecipe.name = recipe.name;
     NSError *error;
     if(![moc save:&error]){
         NSLog(@"ERROR RECIPE CREATE");
     }
-    return managedRecipe;
+    return recipe;
 }
 
 - (NSArray *)retrieveAllRecipes {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity =
-            [NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:moc];
+//    NSEntityDescription *entity =
+//            [NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:moc];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Recipe" inManagedObjectContext:moc];
     [fetchRequest setEntity:entity];
     NSError *error;
     NSArray *fetchedOnjects = [moc executeFetchRequest:fetchRequest error:&error];
@@ -76,7 +75,7 @@ NSManagedObjectContext *moc= nil;
 }
 
 
--(Recipe *)createManagedRecipe{
+-(Recipe *)createManagedRecipe {
     Recipe *recipe = [NSEntityDescription insertNewObjectForEntityForName:@"Recipe"
                                                    inManagedObjectContext:moc];
     return recipe;
