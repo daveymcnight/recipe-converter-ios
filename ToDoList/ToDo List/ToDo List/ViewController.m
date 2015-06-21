@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "Task.h"
 #import "TaskSvcCoreData.h"
+#import "SubTaskViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -43,6 +45,15 @@ TaskSvcCoreData *taskSvcCoreData = nil;
     }
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+        //NSLog(@"%d", (int)indexPath.row);
+    Task *task = [[taskSvcCoreData retrieveAllTasks]objectAtIndex:indexPath.row];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    SubTaskViewController *subTaskViewController = [storyboard instantiateViewControllerWithIdentifier:@"subTaskViewController"];
+    subTaskViewController.parentTask = task;
+    [self.navigationController pushViewController:subTaskViewController animated:YES];
+    
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [taskSvcCoreData.retrieveAllTasks count];
@@ -62,6 +73,15 @@ TaskSvcCoreData *taskSvcCoreData = nil;
     task.name = self.addTaskField.text;
     [taskSvcCoreData createTask:task];
    [self.tableView reloadData];
+}
+
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+
+    
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85A13AE11B37248900599056 /* SubTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A13AE01B37248900599056 /* SubTaskViewController.m */; };
 		85D2C8971B362F6400C7E1A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D2C8961B362F6400C7E1A4 /* main.m */; };
 		85D2C89A1B362F6400C7E1A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D2C8991B362F6400C7E1A4 /* AppDelegate.m */; };
 		85D2C89D1B362F6400C7E1A4 /* ToDo_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85D2C89B1B362F6400C7E1A4 /* ToDo_List.xcdatamodeld */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		85A13ADF1B37248900599056 /* SubTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubTaskViewController.h; path = ../SubTaskViewController.h; sourceTree = "<group>"; };
+		85A13AE01B37248900599056 /* SubTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubTaskViewController.m; path = ../SubTaskViewController.m; sourceTree = "<group>"; };
 		85D2C8911B362F6400C7E1A4 /* ToDo List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D2C8951B362F6400C7E1A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85D2C8961B362F6400C7E1A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -75,6 +78,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85A13AE21B3724AF00599056 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85A13ADF1B37248900599056 /* SubTaskViewController.h */,
+				85A13AE01B37248900599056 /* SubTaskViewController.m */,
+				85D2C89E1B362F6400C7E1A4 /* ViewController.h */,
+				85D2C89F1B362F6400C7E1A4 /* ViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
 		85D2C8881B362F6400C7E1A4 = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +111,10 @@
 		85D2C8931B362F6400C7E1A4 /* ToDo List */ = {
 			isa = PBXGroup;
 			children = (
+				85A13AE21B3724AF00599056 /* controllers */,
 				85D2C8BF1B36361F00C7E1A4 /* model */,
 				85D2C8981B362F6400C7E1A4 /* AppDelegate.h */,
 				85D2C8991B362F6400C7E1A4 /* AppDelegate.m */,
-				85D2C89E1B362F6400C7E1A4 /* ViewController.h */,
-				85D2C89F1B362F6400C7E1A4 /* ViewController.m */,
 				85D2C8A11B362F6400C7E1A4 /* Main.storyboard */,
 				85D2C8A41B362F6400C7E1A4 /* Images.xcassets */,
 				85D2C8A61B362F6400C7E1A4 /* LaunchScreen.xib */,
@@ -266,6 +279,7 @@
 				85D2C8A01B362F6400C7E1A4 /* ViewController.m in Sources */,
 				85D2C89D1B362F6400C7E1A4 /* ToDo_List.xcdatamodeld in Sources */,
 				85D2C8C61B3636B100C7E1A4 /* Subtask.m in Sources */,
+				85A13AE11B37248900599056 /* SubTaskViewController.m in Sources */,
 				961BB79A3326A35EF3D81F75 /* TaskSvcCoreData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
