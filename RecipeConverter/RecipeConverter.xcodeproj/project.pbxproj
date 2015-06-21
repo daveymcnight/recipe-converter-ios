@@ -20,6 +20,7 @@
 		85F48EE41B2E066A00AD9682 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F48EE31B2E066A00AD9682 /* CoreData.framework */; };
 		85F48EE71B2E09C200AD9682 /* RecipeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85F48EE51B2E09C200AD9682 /* RecipeModel.xcdatamodeld */; };
 		85F48EEA1B2E0CB400AD9682 /* RecipeSvcCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F48EE91B2E0CB400AD9682 /* RecipeSvcCoreData.m */; };
+		961BB6F02355156C10849B48 /* IngredientSvcCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 961BBE4A2E973C71A55A4DB7 /* IngredientSvcCoreData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,9 @@
 		85F48EE61B2E09C200AD9682 /* RecipeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipeModel.xcdatamodel; sourceTree = "<group>"; };
 		85F48EE81B2E0CB400AD9682 /* RecipeSvcCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeSvcCoreData.h; sourceTree = "<group>"; };
 		85F48EE91B2E0CB400AD9682 /* RecipeSvcCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeSvcCoreData.m; sourceTree = "<group>"; };
+		961BB0BBA474B0D57D197CC6 /* IngredientSvcCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientSvcCoreData.h; sourceTree = "<group>"; };
+		961BB655617496DD08C9754B /* IngredientSvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientSvc.h; sourceTree = "<group>"; };
+		961BBE4A2E973C71A55A4DB7 /* IngredientSvcCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientSvcCoreData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,9 @@
 				85D985161B10117200711840 /* RecSvc.h */,
 				85F48EE81B2E0CB400AD9682 /* RecipeSvcCoreData.h */,
 				85F48EE91B2E0CB400AD9682 /* RecipeSvcCoreData.m */,
+				961BB655617496DD08C9754B /* IngredientSvc.h */,
+				961BBE4A2E973C71A55A4DB7 /* IngredientSvcCoreData.m */,
+				961BB0BBA474B0D57D197CC6 /* IngredientSvcCoreData.h */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -272,6 +279,7 @@
 				8547F2F91B103D2B008D06F1 /* AppDelegate.m in Sources */,
 				8547F2FA1B103D2B008D06F1 /* ViewController.m in Sources */,
 				8547F2FB1B103D2B008D06F1 /* main.m in Sources */,
+				961BB6F02355156C10849B48 /* IngredientSvcCoreData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

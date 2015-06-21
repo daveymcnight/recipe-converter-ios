@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8532ABEC1B35BF8000F6BECF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8532ABEB1B35BF8000F6BECF /* main.m */; };
+		8532ABEF1B35BF8000F6BECF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8532ABEE1B35BF8000F6BECF /* AppDelegate.m */; };
+		8532ABF21B35BF8000F6BECF /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8532ABF11B35BF8000F6BECF /* MasterViewController.m */; };
+		8532ABF51B35BF8000F6BECF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8532ABF41B35BF8000F6BECF /* DetailViewController.m */; };
+		8532ABF81B35BF8000F6BECF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8532ABF61B35BF8000F6BECF /* Main.storyboard */; };
+		8532ABFA1B35BF8000F6BECF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8532ABF91B35BF8000F6BECF /* Images.xcassets */; };
+		8532ABFD1B35BF8000F6BECF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8532ABFB1B35BF8000F6BECF /* LaunchScreen.xib */; };
+		8532AC091B35BF8000F6BECF /* Recipe_ConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8532AC081B35BF8000F6BECF /* Recipe_ConverterTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8532AC031B35BF8000F6BECF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8532ABDE1B35BF8000F6BECF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8532ABE51B35BF8000F6BECF;
+			remoteInfo = "Recipe Converter";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8532ABE61B35BF8000F6BECF /* Recipe Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8532ABEA1B35BF8000F6BECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8532ABEB1B35BF8000F6BECF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8532ABED1B35BF8000F6BECF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8532ABEE1B35BF8000F6BECF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8532ABF01B35BF8000F6BECF /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		8532ABF11B35BF8000F6BECF /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		8532ABF31B35BF8000F6BECF /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		8532ABF41B35BF8000F6BECF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		8532ABF71B35BF8000F6BECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8532ABF91B35BF8000F6BECF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8532ABFC1B35BF8000F6BECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8532AC021B35BF8000F6BECF /* Recipe ConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recipe ConverterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8532AC071B35BF8000F6BECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8532AC081B35BF8000F6BECF /* Recipe_ConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recipe_ConverterTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8532ABE31B35BF8000F6BECF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8532ABFF1B35BF8000F6BECF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8532ABDD1B35BF8000F6BECF = {
+			isa = PBXGroup;
+			children = (
+				8532ABE81B35BF8000F6BECF /* Recipe Converter */,
+				8532AC051B35BF8000F6BECF /* Recipe ConverterTests */,
+				8532ABE71B35BF8000F6BECF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8532ABE71B35BF8000F6BECF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8532ABE61B35BF8000F6BECF /* Recipe Converter.app */,
+				8532AC021B35BF8000F6BECF /* Recipe ConverterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8532ABE81B35BF8000F6BECF /* Recipe Converter */ = {
+			isa = PBXGroup;
+			children = (
+				8532ABED1B35BF8000F6BECF /* AppDelegate.h */,
+				8532ABEE1B35BF8000F6BECF /* AppDelegate.m */,
+				8532ABF01B35BF8000F6BECF /* MasterViewController.h */,
+				8532ABF11B35BF8000F6BECF /* MasterViewController.m */,
+				8532ABF31B35BF8000F6BECF /* DetailViewController.h */,
+				8532ABF41B35BF8000F6BECF /* DetailViewController.m */,
+				8532ABF61B35BF8000F6BECF /* Main.storyboard */,
+				8532ABF91B35BF8000F6BECF /* Images.xcassets */,
+				8532ABFB1B35BF8000F6BECF /* LaunchScreen.xib */,
+				8532ABE91B35BF8000F6BECF /* Supporting Files */,
+			);
+			path = "Recipe Converter";
+			sourceTree = "<group>";
+		};
+		8532ABE91B35BF8000F6BECF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8532ABEA1B35BF8000F6BECF /* Info.plist */,
+				8532ABEB1B35BF8000F6BECF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8532AC051B35BF8000F6BECF /* Recipe ConverterTests */ = {
+			isa = PBXGroup;
+			children = (
+				8532AC081B35BF8000F6BECF /* Recipe_ConverterTests.m */,
+				8532AC061B35BF8000F6BECF /* Supporting Files */,
+			);
+			path = "Recipe ConverterTests";
+			sourceTree = "<group>";
+		};
+		8532AC061B35BF8000F6BECF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8532AC071B35BF8000F6BECF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8532ABE51B35BF8000F6BECF /* Recipe Converter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8532AC0C1B35BF8000F6BECF /* Build configuration list for PBXNativeTarget "Recipe Converter" */;
+			buildPhases = (
+				8532ABE21B35BF8000F6BECF /* Sources */,
+				8532ABE31B35BF8000F6BECF /* Frameworks */,
+				8532ABE41B35BF8000F6BECF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Recipe Converter";
+			productName = "Recipe Converter";
+			productReference = 8532ABE61B35BF8000F6BECF /* Recipe Converter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8532AC011B35BF8000F6BECF /* Recipe ConverterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8532AC0F1B35BF8000F6BECF /* Build configuration list for PBXNativeTarget "Recipe ConverterTests" */;
+			buildPhases = (
+				8532ABFE1B35BF8000F6BECF /* Sources */,
+				8532ABFF1B35BF8000F6BECF /* Frameworks */,
+				8532AC001B35BF8000F6BECF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8532AC041B35BF8000F6BECF /* PBXTargetDependency */,
+			);
+			name = "Recipe ConverterTests";
+			productName = "Recipe ConverterTests";
+			productReference = 8532AC021B35BF8000F6BECF /* Recipe ConverterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8532ABDE1B35BF8000F6BECF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = msse650;
+				TargetAttributes = {
+					8532ABE51B35BF8000F6BECF = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					8532AC011B35BF8000F6BECF = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 8532ABE51B35BF8000F6BECF;
+					};
+				};
+			};
+			buildConfigurationList = 8532ABE11B35BF8000F6BECF /* Build configuration list for PBXProject "Recipe Converter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8532ABDD1B35BF8000F6BECF;
+			productRefGroup = 8532ABE71B35BF8000F6BECF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8532ABE51B35BF8000F6BECF /* Recipe Converter */,
+				8532AC011B35BF8000F6BECF /* Recipe ConverterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8532ABE41B35BF8000F6BECF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8532ABF81B35BF8000F6BECF /* Main.storyboard in Resources */,
+				8532ABFD1B35BF8000F6BECF /* LaunchScreen.xib in Resources */,
+				8532ABFA1B35BF8000F6BECF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8532AC001B35BF8000F6BECF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8532ABE21B35BF8000F6BECF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8532ABEF1B35BF8000F6BECF /* AppDelegate.m in Sources */,
+				8532ABF21B35BF8000F6BECF /* MasterViewController.m in Sources */,
+				8532ABEC1B35BF8000F6BECF /* main.m in Sources */,
+				8532ABF51B35BF8000F6BECF /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8532ABFE1B35BF8000F6BECF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8532AC091B35BF8000F6BECF /* Recipe_ConverterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8532AC041B35BF8000F6BECF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8532ABE51B35BF8000F6BECF /* Recipe Converter */;
+			targetProxy = 8532AC031B35BF8000F6BECF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8532ABF61B35BF8000F6BECF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8532ABF71B35BF8000F6BECF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8532ABFB1B35BF8000F6BECF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8532ABFC1B35BF8000F6BECF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8532AC0A1B35BF8000F6BECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8532AC0B1B35BF8000F6BECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8532AC0D1B35BF8000F6BECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Recipe Converter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8532AC0E1B35BF8000F6BECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Recipe Converter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8532AC101B35BF8000F6BECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Recipe ConverterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipe Converter.app/Recipe Converter";
+			};
+			name = Debug;
+		};
+		8532AC111B35BF8000F6BECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Recipe ConverterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipe Converter.app/Recipe Converter";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8532ABE11B35BF8000F6BECF /* Build configuration list for PBXProject "Recipe Converter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8532AC0A1B35BF8000F6BECF /* Debug */,
+				8532AC0B1B35BF8000F6BECF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8532AC0C1B35BF8000F6BECF /* Build configuration list for PBXNativeTarget "Recipe Converter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8532AC0D1B35BF8000F6BECF /* Debug */,
+				8532AC0E1B35BF8000F6BECF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8532AC0F1B35BF8000F6BECF /* Build configuration list for PBXNativeTarget "Recipe ConverterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8532AC101B35BF8000F6BECF /* Debug */,
+				8532AC111B35BF8000F6BECF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8532ABDE1B35BF8000F6BECF /* Project object */;
+}
