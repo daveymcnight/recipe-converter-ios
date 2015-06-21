@@ -48,10 +48,9 @@ TaskSvcCoreData *taskSvcCoreData = nil;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
         //NSLog(@"%d", (int)indexPath.row);
     Task *task = [[taskSvcCoreData retrieveAllTasks]objectAtIndex:indexPath.row];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-    SubTaskViewController *subTaskViewController = [storyboard instantiateViewControllerWithIdentifier:@"subTaskViewController"];
+    SubTaskViewController *subTaskViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"subTaskViewController"];
     subTaskViewController.parentTask = task;
-    [self.navigationController pushViewController:subTaskViewController animated:YES];
+    [self presentViewController:subTaskViewController animated:YES completion:nil];
     
 }
 
