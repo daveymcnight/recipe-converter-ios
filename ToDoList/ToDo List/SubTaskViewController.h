@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Task.h"
 
-@interface SubTaskViewController : UIViewController
+@interface SubTaskViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITextField *projectField;
-
-@property (weak, nonatomic) Task *parentTask;
-
+@property (strong) Task *parentTask;
+@property (weak, nonatomic) IBOutlet UITextField *subTaskField;
+@property (weak, nonatomic) IBOutlet UITableView *subTaskTableView;
 
 
 @end

@@ -16,5 +16,4 @@
 -(Task *) updateTask: (Task *)task;
 -(Task *) deleteTask: (Task *)task;
 
-
 @end

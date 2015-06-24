@@ -6,10 +6,10 @@
     </entity>
     <entity name="Task" representedClassName="Task" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="tasks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Subtask" inverseName="task" inverseEntity="Subtask" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Subtask" inverseName="task" inverseEntity="Subtask" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Task" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="Subtask" positionX="-54" positionY="-9" width="128" height="73"/>
+        <element name="Task" positionX="-63" positionY="-18" width="128" height="73"/>
     </elements>
 </model>

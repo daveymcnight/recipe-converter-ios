@@ -8,8 +8,10 @@
 
 @interface TaskSvcCoreData : NSObject  <TaskSvc>
 
--(Task *)createManagedTask;
 
+
+-(Task *)createManagedTask;
+-(Task *)saveTask:(Task *)task;
 
 
 

@@ -10,10 +10,11 @@
 
 NSManagedObjectModel *model = nil;
 NSPersistentStoreCoordinator *psc= nil;
+
 NSManagedObjectContext *moc= nil;
 
 
--(void) initializeCoreData {
++ (void)initialize {
     // initialize (load) the schema model
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"ToDo_List" withExtension:@"momd"];
     model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
@@ -25,7 +26,7 @@ NSManagedObjectContext *moc= nil;
     psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
     if ([psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL: storeURL options: nil error:&error]) {
         // initialize the managed object context
-        moc= [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+        moc = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         [moc setPersistentStoreCoordinator:psc];
     } else{
         NSLog(@"initializeCoreDataFAILED with error: %@", error);
@@ -34,7 +35,7 @@ NSManagedObjectContext *moc= nil;
 
 -(id) init{
     if(self = [super init]){
-        [self initializeCoreData];
+//        [self initializeCoreData];
         return self;
     }
     return nil;
@@ -67,14 +68,29 @@ NSManagedObjectContext *moc= nil;
 - (Task *)updateTask:(Task *)task {
     NSError *error;
     if(![moc save:&error]){
-        NSLog(@"ERROR RECIPE CREATE");
+        NSLog(@"ERROR TASK CREATE");
     }
     return task;
 }
 
 - (Task *)deleteTask:(Task *)task {
     [moc deleteObject:task];
+    NSError *error;
+    if(![moc save:&error]){
+        NSLog(@"ERROR Task Delete");
+    }
+
     return task;
 }
+
+- (Task *)saveTask:(Task *)task {
+    NSError *error;
+    if(![moc save:&error]){
+        NSLog(@"ERROR TASK Save");
+    }
+    return task;
+}
+
+
 
 @end

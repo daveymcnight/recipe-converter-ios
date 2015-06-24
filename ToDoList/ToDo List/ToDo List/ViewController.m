@@ -68,10 +68,16 @@ TaskSvcCoreData *taskSvcCoreData = nil;
 }
 
 - (IBAction)addTask:(id)sender {
-    Task *task = [taskSvcCoreData createManagedTask];
-    task.name = self.addTaskField.text;
-    [taskSvcCoreData createTask:task];
-   [self.tableView reloadData];
+    if(![_addTaskField.text length] == 0) {
+        Task *task = [taskSvcCoreData createManagedTask];
+        task.name = self.addTaskField.text;
+        [taskSvcCoreData createTask:task];
+        _addTaskField.text = @"";
+        [self.tableView reloadData];
+    }else{
+        NSLog(@"Empty String");
+    }
+
 }
 
 
