@@ -24,7 +24,7 @@ NSArray *subTasksArray;
     taskSvcCoreData2 = [[TaskSvcCoreData alloc] init];
     subTaskSvcCoreData = [[SubTaskSvcCoreData alloc] init];
     subTasksArray = [_parentTask.tasks allObjects];
-
+    _subTaskField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
 
 }
 

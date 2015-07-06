@@ -22,6 +22,7 @@ TaskSvcCoreData *taskSvcCoreData = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
     taskSvcCoreData = [[TaskSvcCoreData alloc] init];
+     _addTaskField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -74,6 +75,7 @@ TaskSvcCoreData *taskSvcCoreData = nil;
         [taskSvcCoreData createTask:task];
         _addTaskField.text = @"";
         [self.tableView reloadData];
+        [self.view endEditing:YES];
     }else{
         NSLog(@"Empty String");
     }
