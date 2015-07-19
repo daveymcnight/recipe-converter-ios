@@ -1,0 +1,3 @@
+[submodule "Game Keeper/Alamofire"]
+	path = Game Keeper/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git

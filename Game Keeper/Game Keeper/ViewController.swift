@@ -7,34 +7,27 @@
 //
 
 import UIKit
-
+import Alamofire
 
 var systemsArray: [String] = []
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var systemsTableView: UITableView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let url = NSURL(string: "http://localhost/systems")
+//        let url = NSURL(string: "http://localhost/systems")
         
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
-            println(NSString(data: data, encoding: NSUTF8StringEncoding))
-            let json = JSON(data:data)
-            
-            for (index, object) in json {
-                let name = object["name"].stringValue
-                systemsArray.append(name);
-                
-            }
-             self.do_table_refresh()
-           
+        Alamofire.request(.GET, "http://localhost/systems")
+            .responseJSON { (_, _, json, _) in
+               let json = JSON(json!)
+               println(json)
+                for (index, object) in json {
+                    let name = object["name"].stringValue
+                    systemsArray.append(name);
+                }
+            self.do_table_refresh()
         }
-        
-        task.resume()
-       
-        
     }
     
    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
