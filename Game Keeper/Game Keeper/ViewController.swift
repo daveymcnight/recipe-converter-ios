@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-var systemsArray: [String] = []
+var systemsArray: [System] = []
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var systemsTableView: UITableView!
@@ -18,17 +18,35 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
 //        let url = NSURL(string: "http://localhost/systems")
         
+        systemsArray.removeAll(keepCapacity: false)
+        
         Alamofire.request(.GET, "http://localhost/systems")
             .responseJSON { (_, _, json, _) in
                let json = JSON(json!)
                println(json)
                 for (index, object) in json {
-                    let name = object["name"].stringValue
-                    systemsArray.append(name);
+                    var system = System(id: object["id"].intValue,
+                        name: object["name"].stringValue)
+                    systemsArray.append(system);
                 }
             self.do_table_refresh()
         }
     }
+    @IBAction func goToGamesView(sender: AnyObject) {
+        
+        
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var gameVC = self.storyboard?.instantiateViewControllerWithIdentifier("gamesvc") as! GamesViewController
+        let tempSystem = systemsArray[indexPath.row] as System
+        gameVC.parentSystem = tempSystem
+        self.navigationController?.setViewControllers([gameVC], animated: false)
+        self.presentViewController(gameVC, animated: true, completion: nil)
+        
+    }
+
+    
     
    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return systemsArray.count;
@@ -37,7 +55,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("systemCell", forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel?.text = systemsArray[indexPath.row];
+        cell.textLabel?.text = systemsArray[indexPath.row].name;
         return cell;
     }
 

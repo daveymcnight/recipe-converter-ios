@@ -16,6 +16,8 @@
 		85263E621B4E06B60044E511 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85263E611B4E06B60044E511 /* SwiftyJSON.swift */; };
 		85263EEE1B5328DD0044E511 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85263EE71B5328D00044E511 /* Alamofire.framework */; };
 		85263EEF1B5328DD0044E511 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85263EE71B5328D00044E511 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85AD8CA21B60525100F814E0 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AD8CA11B60525100F814E0 /* GamesViewController.swift */; };
+		85AD8CA71B6076AE00F814E0 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AD8CA61B6076AE00F814E0 /* System.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		85263E571B4DE2510044E511 /* Game_KeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_KeeperTests.swift; sourceTree = "<group>"; };
 		85263E611B4E06B60044E511 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		85263EDF1B5328D00044E511 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../../../../.Trash/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		85AD8CA11B60525100F814E0 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		85AD8CA61B6076AE00F814E0 /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 		85263E3E1B4DE2510044E511 /* Game Keeper */ = {
 			isa = PBXGroup;
 			children = (
+				85AD8CA11B60525100F814E0 /* GamesViewController.swift */,
 				85263E611B4E06B60044E511 /* SwiftyJSON.swift */,
 				85263E411B4DE2510044E511 /* AppDelegate.swift */,
 				85263E431B4DE2510044E511 /* ViewController.swift */,
@@ -140,6 +145,7 @@
 				85263E481B4DE2510044E511 /* Images.xcassets */,
 				85263E4A1B4DE2510044E511 /* LaunchScreen.xib */,
 				85263E3F1B4DE2510044E511 /* Supporting Files */,
+				85AD8CA61B6076AE00F814E0 /* System.swift */,
 			);
 			path = "Game Keeper";
 			sourceTree = "<group>";
@@ -319,6 +325,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85AD8CA71B6076AE00F814E0 /* System.swift in Sources */,
+				85AD8CA21B60525100F814E0 /* GamesViewController.swift in Sources */,
 				85263E621B4E06B60044E511 /* SwiftyJSON.swift in Sources */,
 				85263E441B4DE2510044E511 /* ViewController.swift in Sources */,
 				85263E421B4DE2510044E511 /* AppDelegate.swift in Sources */,
