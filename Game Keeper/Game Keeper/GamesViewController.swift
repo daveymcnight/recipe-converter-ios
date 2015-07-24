@@ -34,8 +34,6 @@ class GamesViewController: UIViewController, UITableViewDataSource, UITableViewD
                 }
                 self.do_table_refresh()
         }
-        
-
         // Do any additional setup after loading the view.
     }
 

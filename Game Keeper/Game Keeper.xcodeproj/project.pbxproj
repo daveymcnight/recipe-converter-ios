@@ -18,6 +18,8 @@
 		85263EEF1B5328DD0044E511 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85263EE71B5328D00044E511 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85AD8CA21B60525100F814E0 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AD8CA11B60525100F814E0 /* GamesViewController.swift */; };
 		85AD8CA71B6076AE00F814E0 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AD8CA61B6076AE00F814E0 /* System.swift */; };
+		85AD8CAA1B62855900F814E0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AD8CA91B62855900F814E0 /* Social.framework */; };
+		85AD8CAF1B62876000F814E0 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AD8CAE1B62876000F814E0 /* SocialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		85263EDF1B5328D00044E511 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../../../../.Trash/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		85AD8CA11B60525100F814E0 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		85AD8CA61B6076AE00F814E0 /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		85AD8CA91B62855900F814E0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		85AD8CAE1B62876000F814E0 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85AD8CAA1B62855900F814E0 /* Social.framework in Frameworks */,
 				85263EEE1B5328DD0044E511 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +123,7 @@
 		85263E331B4DE2510044E511 = {
 			isa = PBXGroup;
 			children = (
+				85AD8CA91B62855900F814E0 /* Social.framework */,
 				85263EDF1B5328D00044E511 /* Alamofire.xcodeproj */,
 				85263E3E1B4DE2510044E511 /* Game Keeper */,
 				85263E541B4DE2510044E511 /* Game KeeperTests */,
@@ -146,6 +152,7 @@
 				85263E4A1B4DE2510044E511 /* LaunchScreen.xib */,
 				85263E3F1B4DE2510044E511 /* Supporting Files */,
 				85AD8CA61B6076AE00F814E0 /* System.swift */,
+				85AD8CAE1B62876000F814E0 /* SocialViewController.swift */,
 			);
 			path = "Game Keeper";
 			sourceTree = "<group>";
@@ -328,6 +335,7 @@
 				85AD8CA71B6076AE00F814E0 /* System.swift in Sources */,
 				85AD8CA21B60525100F814E0 /* GamesViewController.swift in Sources */,
 				85263E621B4E06B60044E511 /* SwiftyJSON.swift in Sources */,
+				85AD8CAF1B62876000F814E0 /* SocialViewController.swift in Sources */,
 				85263E441B4DE2510044E511 /* ViewController.swift in Sources */,
 				85263E421B4DE2510044E511 /* AppDelegate.swift in Sources */,
 			);
