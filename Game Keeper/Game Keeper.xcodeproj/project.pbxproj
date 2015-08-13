@@ -94,6 +94,7 @@
 		85263E571B4DE2510044E511 /* Game_KeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_KeeperTests.swift; sourceTree = "<group>"; };
 		85263E611B4E06B60044E511 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		85263EDF1B5328D00044E511 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../../../../.Trash/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		855B1B2E1B71C80600A2A32A /* Game Keeper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Game Keeper.entitlements"; sourceTree = "<group>"; };
 		85AD8CA11B60525100F814E0 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		85AD8CA61B6076AE00F814E0 /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
 		85AD8CA91B62855900F814E0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -143,6 +144,7 @@
 		85263E3E1B4DE2510044E511 /* Game Keeper */ = {
 			isa = PBXGroup;
 			children = (
+				855B1B2E1B71C80600A2A32A /* Game Keeper.entitlements */,
 				85AD8CA11B60525100F814E0 /* GamesViewController.swift */,
 				85263E611B4E06B60044E511 /* SwiftyJSON.swift */,
 				85263E411B4DE2510044E511 /* AppDelegate.swift */,
@@ -244,6 +246,12 @@
 				TargetAttributes = {
 					85263E3B1B4DE2510044E511 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 29GYXJ54QZ;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					85263E501B4DE2510044E511 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -469,9 +477,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Game Keeper/Game Keeper.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Game Keeper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -479,9 +491,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Game Keeper/Game Keeper.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Game Keeper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

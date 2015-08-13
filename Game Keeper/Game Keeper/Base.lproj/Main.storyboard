@@ -24,7 +24,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToGamesView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YXI-iw-qRB"/>
+                                    <action selector="addSystem:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KDW-KY-xbc"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Mu5-gC-NfM">
@@ -66,6 +66,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="inputSystem" destination="WYH-IF-deP" id="YRe-3T-qTn"/>
                         <outlet property="systemsTableView" destination="Mu5-gC-NfM" id="J4e-tY-ulm"/>
                     </connections>
                 </viewController>

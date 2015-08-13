@@ -9,10 +9,44 @@
 import UIKit
 import Alamofire
 
+
+
 var systemsArray: [System] = []
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
+    
     @IBOutlet weak var systemsTableView: UITableView!
+    
+    @IBOutlet weak var inputSystem: UITextField!
+    
+    
+    @IBAction func addSystem(sender: AnyObject) {
+        
+        
+        var postsEndpoint: String = "http://localhost/post/system";
+        var newPost = ["name": inputSystem.text, "body": "I iz fisrt", "userId": 1];
+        
+        Alamofire.request(.POST, postsEndpoint, parameters: newPost as! [String : AnyObject], encoding: .JSON)
+            .responseJSON { (request, response, data, error) in
+                if let anError = error
+                {
+                    // got an error in getting the data, need to handle it
+                    println("error calling POST on /posts")
+                    println(error)
+                }
+                else if let data: AnyObject = data
+                {
+                    // handle the results as JSON, without a bunch of nested if loops
+                    let post = JSON(data)
+                    // to make sure it posted, print the results
+                    println("The post is: " + post.description)
+                }
+        }
+        self.do_table_refresh();
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,7 +57,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         Alamofire.request(.GET, "http://localhost/systems")
             .responseJSON { (_, _, json, _) in
                let json = JSON(json!)
-               println(json)
+               //println(json)
                 for (index, object) in json {
                     var system = System(id: object["id"].intValue,
                         name: object["name"].stringValue)
