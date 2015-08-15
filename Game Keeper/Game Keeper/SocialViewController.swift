@@ -8,8 +8,13 @@
 
 import UIKit
 import Social
+//import Socket_IO_Client_Swift
 
 class SocialViewController: UIViewController {
+    
+    
+    
+    
     
     
 
@@ -17,6 +22,11 @@ class SocialViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+        //let socket = SocketIOClient(socketURL: "http://regisscis.net:8080")
+       
+        
     }
 
     override func didReceiveMemoryWarning() {

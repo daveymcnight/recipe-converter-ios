@@ -16,6 +16,37 @@ var systemsArray: [System] = []
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
+    @IBAction func socket(sender: AnyObject) {
+        
+        
+
+        let socket = SocketIOClient(socketURL: "www.regisscis.net:8080", opts: [
+            "reconnects": true, // Default is true
+            "reconnectAttempts": 5, // Default is -1 (infinite tries)
+            "reconnectWait": 5, // Default is 10
+            "nsp": "swift", // connects to the specified namespace. Default is /
+            "forcePolling": true, // if true, the socket will only use XHR polling, Default is false (polling/WebSockets)
+            ])
+        
+        socket.onAny {println("got event: \($0.event) with items \($0.items)")}
+        
+        // Socket Events
+        socket.on("connect") {data, ack in
+            println("socket connected")
+            
+            // Sending messages
+            socket.emit("")
+            println(String(stringInterpolationSegment: data))
+        
+        }
+        
+        
+       
+        // Connecting
+        socket.connect()
+
+        
+    }
     
     @IBOutlet weak var systemsTableView: UITableView!
     
