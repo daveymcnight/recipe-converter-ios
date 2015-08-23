@@ -57,7 +57,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         var postsEndpoint: String = "http://localhost/post/system";
-        var newPost = ["name": inputSystem.text, "body": "I iz fisrt", "userId": 1];
+        var newPost = ["name": inputSystem.text, "body": "Cool System", "userId": 20];
         
         Alamofire.request(.POST, postsEndpoint, parameters: newPost as! [String : AnyObject], encoding: .JSON)
             .responseJSON { (request, response, data, error) in
