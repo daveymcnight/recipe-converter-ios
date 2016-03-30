@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCb-zt-wsv">
+                                <rect key="frame" x="301" y="20" width="58" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTask:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xkg-S1-9Nj"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Contact" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HO0-yc-bg4">
+                                <rect key="frame" x="16" y="68" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1mW-vd-bKn">
+                                <rect key="frame" x="0.0" y="115" width="375" height="552"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="task" rowHeight="40" id="9xO-50-97K">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9xO-50-97K" id="3pf-vx-yFo">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="eeq-qp-SC2"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="umt-bC-BZ1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GCb-zt-wsv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="ArS-MO-07j"/>
+                            <constraint firstItem="1mW-vd-bKn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="HbY-dv-mwc"/>
+                            <constraint firstItem="HO0-yc-bg4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Jc0-fI-3nY"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="1mW-vd-bKn" secondAttribute="bottom" id="bmY-h5-GVD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1mW-vd-bKn" secondAttribute="trailing" constant="-16" id="bvM-ko-gXR"/>
+                            <constraint firstItem="HO0-yc-bg4" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="cCl-Bt-bKw"/>
+                            <constraint firstItem="1mW-vd-bKn" firstAttribute="top" secondItem="HO0-yc-bg4" secondAttribute="bottom" constant="17" id="fiI-gU-7JX"/>
+                            <constraint firstItem="HO0-yc-bg4" firstAttribute="top" secondItem="GCb-zt-wsv" secondAttribute="bottom" id="mJJ-uT-RTg"/>
+                            <constraint firstItem="GCb-zt-wsv" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="oT7-Va-1A7"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="addTaskField" destination="HO0-yc-bg4" id="zh1-ec-r5Q"/>
+                        <outlet property="tableView" destination="1mW-vd-bKn" id="gq0-KJ-lYX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186.5" y="424.5"/>
+        </scene>
+        <!--Contact Detail View Controller-->
+        <scene sceneID="goT-kg-wJn">
+            <objects>
+                <viewController storyboardIdentifier="subTaskViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="igO-1f-gEG" customClass="ContactDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eB4-DN-FPD"/>
+                        <viewControllerLayoutGuide type="bottom" id="gSD-x4-DDY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hZ7-dx-ti1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMs-j6-HoC">
+                                <rect key="frame" x="16" y="20" width="46" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="igO-1f-gEG" eventType="touchUpInside" id="fNg-eW-YPg"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="pdg-De-CA2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ic-NY-peC">
+                                <rect key="frame" x="50" y="69" width="274" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0ic-NY-peC" secondAttribute="trailing" constant="35" id="AQs-sy-QZe"/>
+                            <constraint firstItem="mMs-j6-HoC" firstAttribute="leading" secondItem="hZ7-dx-ti1" secondAttribute="leadingMargin" id="Phn-Eo-CKj"/>
+                            <constraint firstItem="0ic-NY-peC" firstAttribute="top" secondItem="mMs-j6-HoC" secondAttribute="bottom" constant="8" id="XyO-cQ-Fr0"/>
+                            <constraint firstItem="0ic-NY-peC" firstAttribute="leading" secondItem="hZ7-dx-ti1" secondAttribute="leadingMargin" constant="34" id="a1x-ej-e7f"/>
+                            <constraint firstItem="mMs-j6-HoC" firstAttribute="top" secondItem="eB4-DN-FPD" secondAttribute="bottom" id="dSa-Tg-KKa"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="projectField" destination="0ic-NY-peC" id="0Of-Ka-1wE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBo-m9-S3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662.5" y="424.5"/>
+        </scene>
+    </scenes>
+</document>
